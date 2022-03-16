@@ -1,6 +1,9 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
+/* CSS */
+import "../sass/Main.scss";
+
 /* IMAGES */
 import Wasp from '../images/wasp.png';
 
@@ -22,8 +25,13 @@ function Main() {
     return (
         <main className='content-container'>
             <section id='intro'>
-                <h1>WASP</h1>
-                <button type='button'>Find out more</button>
+                <div className='text-container'>
+                    <h1>WASP</h1>
+                    <button type='button'>Find out more</button>
+                </div>
+                <svg class="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+                </svg>
             </section>
             <section id='content'>
                 <article id='generic-text'>

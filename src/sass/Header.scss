@@ -1,0 +1,65 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+@font-face {
+    font-family: "Zector";
+    src: url("../fonts/Zector.ttf");
+}
+
+header.main-header {
+    @include flex-align(center, space-between);
+
+    background-color: $body-color;
+    height: $header-size;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    z-index: 1;
+
+    grid-area: h;
+}
+
+nav {
+    height: 100%;
+}
+
+.menu-list {
+    height: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu-option {
+    @include flex-align(center, center);
+
+    height: 100%;
+    padding: 10px;
+
+    display: flex;
+
+    &:hover {
+        background-color: $body-color - rgb(20, 20, 20);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $body-color - rgb(40, 40, 40);
+    }
+}
+
+
+a {
+    color: $font-color;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 2em;
+    font-family: "Zector";
+}
+
+#logo {
+    height: 80%;
+}

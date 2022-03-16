@@ -1,0 +1,9 @@
+$header-size: 94px;
+
+@mixin flex-align($itens: stretch, $content: flex-start, $acontent: normal) {
+    display: flex;
+
+    align-items: $itens;
+    justify-content: $content;
+    align-content: $acontent;
+}

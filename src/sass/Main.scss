@@ -1,0 +1,93 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@font-face {
+    font-family: "Zector";
+    src: url("../fonts/Zector.ttf");
+}
+@font-face {
+    font-family: "dealerplate";
+    src: url("../fonts/dealerplate\ california.ttf");
+}
+
+main.content-container {
+    margin-top: $header-size;
+}
+
+/* SEÇÃO E PARALLAX */
+section#intro {
+    display: block;
+
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 101% auto;
+    background-attachment: fixed;
+
+    height: 100vh;
+
+    position: relative;
+}
+
+/* ONDA SVG */
+.curveUpColor {
+    color: $body-color;
+    fill: $body-color;
+    stroke: $body-color;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* TÍTULOS */
+.text-container {
+    @include flex-align(center, center);
+
+    flex-flow: column wrap;
+
+    margin-left: 30px;
+    width: 50%;
+    height: 58%;
+
+    animation: appear-title 0.6s linear 0s 1 normal;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    font-family: "dealerplate";
+    color: $font-color;
+    font-size: 10em;
+}
+
+button {
+    font-family: "Zector";
+    padding: 10px;
+    font-size: 2.5em;
+    border-radius: 30px;
+    color: $font-color;
+
+    letter-spacing: -4px;
+    word-spacing: -10px;
+
+    transition: transform 0.4s, color 0.4s;
+    
+    &:hover {
+        background-color: $body-color - rgb(20, 20, 20);
+        transform: scale(1.2);
+    }
+    &:active {
+        background-color: $body-color - rgb(39, 39, 39);
+    }
+}
+
+
+
+@keyframes appear-title {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
