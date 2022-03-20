@@ -1,4 +1,4 @@
-$header-size: 75px;
+$header-size: 75px !default;
 
 @mixin flex-align($itens: stretch, $content: flex-start, $acontent: normal) {
     display: flex;
@@ -6,4 +6,8 @@ $header-size: 75px;
     align-items: $itens;
     justify-content: $content;
     align-content: $acontent;
+}
+
+@mixin rounded {
+    border-radius: 2px;
 }

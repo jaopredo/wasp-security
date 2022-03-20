@@ -1,5 +1,4 @@
-@import "./colors.scss";
-@import "./mixins.scss";
+@import "./modules/colors.scss", "./modules/mixins.scss";
 @font-face {
     font-family: "Zector";
     src: url("../fonts/Zector.ttf");
@@ -53,7 +52,6 @@ section#intro {
 }
 
 h1 {
-    @include flex-align(center, center);
     font-family: "dealerplate";
     color: $body-color;
     font-size: 11em;

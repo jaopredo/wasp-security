@@ -1,5 +1,4 @@
-@import "./colors.scss";
-@import "./mixins.scss";
+@import "./modules/colors.scss", "./modules/mixins.scss";
 @font-face {
     font-family: "dealerplate";
     src: url("../fonts/dealerplate\ california.ttf");

@@ -1,9 +1,11 @@
-@import "./mixins.scss";
-@import "./colors.scss";
+@import "./modules/colors.scss", "./modules/mixins.scss";
 @font-face {
     font-family: "Zector";
     src: url("../fonts/Zector.ttf");
 }
+
+$header-padding: 20px;
+$header-size: 75px;
 
 header.main-header {
     @include flex-align(stretch, space-between);
@@ -12,6 +14,8 @@ header.main-header {
     height: $header-size;
     width: 100vw;
     box-shadow: rgba(0, 0, 0, 0.253) 0px 3px 5px;
+    padding-right: $header-padding;
+    padding-left: $header-padding;
 
     position: fixed;
     top: 0;

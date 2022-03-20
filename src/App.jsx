@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import './sass/App.scss';
-
 /* AREAS */
 import Header from './areas/Header';
 import Main from './areas/Main';
