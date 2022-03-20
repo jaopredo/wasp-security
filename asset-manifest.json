@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wasp-security/static/css/main.608281fb.css",
+    "main.css": "/wasp-security/static/css/main.00275902.css",
     "main.js": "/wasp-security/static/js/main.ccc0f2e7.js",
     "static/js/787.5dff5e16.chunk.js": "/wasp-security/static/js/787.5dff5e16.chunk.js",
     "static/media/background.png": "/wasp-security/static/media/background.6cbc51b53e70a6ce35ee.png",
@@ -10,12 +10,12 @@
     "static/media/honey.png": "/wasp-security/static/media/honey.8d26065fe61d8ffbd3e5.png",
     "static/media/wasp.png": "/wasp-security/static/media/wasp.a1c566f89d14f1b3c1b6.png",
     "index.html": "/wasp-security/index.html",
-    "main.608281fb.css.map": "/wasp-security/static/css/main.608281fb.css.map",
+    "main.00275902.css.map": "/wasp-security/static/css/main.00275902.css.map",
     "main.ccc0f2e7.js.map": "/wasp-security/static/js/main.ccc0f2e7.js.map",
     "787.5dff5e16.chunk.js.map": "/wasp-security/static/js/787.5dff5e16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.608281fb.css",
+    "static/css/main.00275902.css",
     "static/js/main.ccc0f2e7.js"
   ]
 }
