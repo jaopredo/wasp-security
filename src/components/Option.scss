@@ -1,0 +1,40 @@
+@import "../sass/colors.scss";
+@import "../sass/mixins.scss";
+@font-face {
+    font-family: 'dealerplate';
+    src: url("../fonts/dealerplate\ california.ttf");
+}
+
+.option {
+    @include flex-align(center, space-between);
+    flex-flow: column wrap;
+
+    width: 100%;
+    padding: 30px;
+
+    background-color: $generic-yellow;
+    color: $body-color;
+
+    border-radius: 20px;
+    height: 330px;
+
+    transition: transform 0.5s;
+
+    figcaption {
+        color: $font-color;
+        font-size: 3em;
+        font-family: 'dealerplate';
+    }
+    &:hover {
+        background-color: $generic-yellow - rgb(10, 10, 10);
+        transform: translateY(-30px);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $generic-yellow - rgb(30, 30, 30);
+    }
+}
+
+.option-image {
+    height: 120px;
+}

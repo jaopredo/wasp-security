@@ -1,0 +1,23 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@font-face {
+    font-family: "dealerplate";
+    src: url("../fonts/dealerplate\ california.ttf");
+}
+
+$border-radius: 100px;
+
+.footer-contact {
+    font-family: "dealerplate";
+    background-color: $generic-yellow;
+    height: fit-content;
+    padding: 30px;
+
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    color: $font-color;
+    font-size: 2.7em;
+
+    text-indent: 4%;
+}

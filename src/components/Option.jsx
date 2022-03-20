@@ -1,15 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import "./Option.scss";
 
 function Option({ src, legend }) {
     return (
-        <li className='service-option'>
-            <figure>
-                <img src={src} alt={legend} />
-                <figcaption>{legend}</figcaption>
-            </figure>
-        </li>
+        <figure className='option'>
+            <img className='option-image' src={src} alt={legend} />
+            <figcaption>{legend}</figcaption>
+        </figure>
     );
 }
 

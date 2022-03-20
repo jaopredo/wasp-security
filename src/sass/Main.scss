@@ -46,16 +46,18 @@ section#intro {
 
     margin-left: 30px;
     width: 50%;
-    height: 58%;
+    height: 67%;
 
     animation: appear-title 0.6s linear 0s 1 normal;
     animation-fill-mode: forwards;
 }
 
 h1 {
+    @include flex-align(center, center);
     font-family: "dealerplate";
-    color: $font-color;
-    font-size: 10em;
+    color: $body-color;
+    font-size: 11em;
+    font-weight: 100;
 }
 
 button {
@@ -89,5 +91,48 @@ button {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* CONTENT */
+#content {
+    @include flex-align(stretch, space-evenly);
+    flex-flow: column wrap;
+    gap: 150px;
+
+    margin-top: 100px;
+
+    background-image: url("../images/honey.png");
+    background-repeat: no-repeat;
+    background-position: 0px 70px
+}
+
+#generic-text {
+    @include flex-align(center, center);
+    flex-flow: row wrap;
+}
+
+.content-text-container {
+    text-align: center;
+    width: 50%;
+
+    p {
+        display: block;
+        font-family: "dealerplate";
+        font-size: 1.7em;
+        color: $font-color;
+    }
+}
+
+.services-list {
+    @include flex-align(center, center);
+    flex-flow: row wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+
+    li {
+        height: 100%;
+        width: 20%;
     }
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 /* IMAGES */
 import Logo from '../images/logo.png';
@@ -6,10 +7,25 @@ import Logo from '../images/logo.png';
 /* CSS */
 import '../sass/Header.scss';
 
-function Header() {
+function Header({ titleProgress }) {
+    /**
+     *  Tag que guarda a área do cabeçalho do site.
+     *  
+     *  @param {Object} titleProgress Armazena o valor da opacidade do título
+     */
+    const titleRef = useRef();  // Ref do título
+
     return (
         <header className='main-header'>
-            <img id='logo' src={Logo} alt="Logo" />
+            <div className="logo-container">
+                <img id='logo' src={Logo} alt="Logo" />
+                <Parallax onProgressChange={progress => {
+                    titleRef.current.style.opacity = titleProgress;
+                    // Coloco a opacidade do titulo como o progresso do main (0 à 1)
+                }}>
+                    <h1 ref={titleRef}>WASP</h1>
+                </Parallax>
+            </div>
             <nav>
                 <ul className='menu-list generic-list'>
                     <li className='menu-option'><a href="#intro">Home</a></li>
