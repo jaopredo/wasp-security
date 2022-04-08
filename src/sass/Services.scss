@@ -1,0 +1,62 @@
+@import "./modules/colors.scss", "./modules/mixins.scss";
+@font-face {
+    font-family: "dealerplate";
+    src: url("../fonts/dealerplate\ california.ttf");
+}
+
+.services-container-desc {
+    background-image: url("../images/bg-page.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 200%;
+}
+
+.services-list-desc {
+    @include flex-align(center, center);
+    flex-flow: row wrap;
+    gap: 50px;
+
+    li {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.service-option {
+    @include flex-align(center, space-between);
+    flex-flow: column nowrap;
+    gap: 30px;
+
+    width: 100%;
+    padding: 30px;
+
+    color: $body-color;
+
+    figcaption {
+        color: $body-color;
+        text-align: center;
+        font-size: 3.5vw;
+        font-family: 'dealerplate';
+    }
+    
+    &:hover {
+        cursor: auto;
+    }
+}
+
+.service {
+    @include flex-align(center, center, center);
+    flex-flow: row nowrap;
+    gap: 30px;
+
+    p {
+        display: block;
+        width: 50%;
+        color: $font-color;
+        font-size: 1.3rem;
+        background: $body-color;
+        padding: 30px;
+        border-radius: 10px;
+        font-family: "dealerplate";
+    }
+}

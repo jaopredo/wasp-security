@@ -7,23 +7,12 @@ import "../sass/Main.scss";
 /* IMAGES */
 import Wasp from '../images/wasp.png';
 
-import Search from '../images/search-icon.png';
-import Game from '../images/game-icon.png';
-import Block from '../images/block-icon.png';
-
 /* COMPONENTS */
 import Option from '../components/Option';
 
-function Main({ setProgress }) {
-    const servicesOptions = [
-        {src: Search, legend: 'Consultoria'},
-        {src: Game, legend: 'Tratamento'},
-        {src: Block, legend: 'Prevenção'},
-    ];
-
-
+function Main({ setProgress, servicesOptions }) {
     return (
-        <main className='content-container'>
+        <>
             <section id='intro'>
                 <div className='text-container'>
                     <h1>WASP</h1>
@@ -52,15 +41,15 @@ function Main({ setProgress }) {
                     </div>
                     <img src={Wasp} alt="Vespa" />
                 </article>
-                <article className='services-container'>
+                <article id='services' className='services-container'>
                     <ul className='services-list generic-list'>
                         {React.Children.toArray(servicesOptions.map(
-                            imagem => <li className='service-option'><Option {...imagem} /></li>
+                            imagem => <li className='service-option'><Option {...imagem} className="option" /></li>
                         ))}
                     </ul>
                 </article>
             </section>
-        </main>
+        </>
     );
 }
 
