@@ -7,7 +7,7 @@ import Logo from '../images/logo.png';
 /* CSS */
 import '../sass/Header.scss';
 
-function Header({ titleProgress }) {
+function Header({ titleProgress, haveMenu }) {
     /**
      *  Tag que guarda a área do cabeçalho do site.
      *  
@@ -26,13 +26,13 @@ function Header({ titleProgress }) {
                     <h1 ref={titleRef}>WASP</h1>
                 </Parallax>
             </div>
-            <nav>
+            {haveMenu && <nav>
                 <ul className='menu-list generic-list'>
                     <li className='menu-option'><a href="#intro">Home</a></li>
                     <li className='menu-option'><a href="#services">Services</a></li>
                     <li className='menu-option'><a href="#contact">Support</a></li>
                 </ul>
-            </nav>
+            </nav>}
         </header>
     );
 }
