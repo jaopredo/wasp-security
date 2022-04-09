@@ -23,9 +23,9 @@ function Main({ setProgress, servicesOptions }) {
             <section id='content'>
                 <article id='generic-text'>
                     <div className='content-text-container'>
-                        <p>Sobre nós</p>
-                        <p>Trabalhamos com o objetivo de oferecer aos nossos clientes o melhor e mais eficiente sistema de proteção.</p>
-                        <p>Tendo em vista, que, uma empresa verdadeiramente comprometida com seus serviços precisa proteger as suas próprias informações e os dados dos seus funcionários.</p>
+                        <h2>About Us</h2>
+                        <p>We work to offer our clients the <strong>best</strong> and the <strong>most efficient</strong> protection system</p>
+                        <p>Seeing that an truly compromised company always prizes for its own informations and data of clients and employees </p>
                     </div>
                     <img src={Wasp} alt="Vespa" />
                 </article>

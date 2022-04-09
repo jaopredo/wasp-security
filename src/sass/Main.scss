@@ -109,6 +109,11 @@ button {
 #generic-text {
     @include flex-align(center, center);
     flex-flow: row wrap;
+
+    h2 {
+        font-family: "dealerplate";
+        font-size: 2.8rem;
+    }
 }
 
 .content-text-container {

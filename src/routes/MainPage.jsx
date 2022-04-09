@@ -18,18 +18,15 @@ function MainPage() {
     const servicesOptions = [
         {
             src: Search,
-            legend: 'Consultoria',
-            text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quis corporis quos quam officiis magni, non iure vitae tempore facilis a expedita eos ipsum eum, ratione vel minima tenetur explicabo!',
+            legend: 'Security Consulting',
         },
         {
             src: Game,
-            legend: 'Tratamento',
-            text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quis corporis quos quam officiis magni, non iure vitae tempore facilis a expedita eos ipsum eum, ratione vel minima tenetur explicabo!',
+            legend: 'Security Management',
         },
         {
             src: Block,
-            legend: 'Prevenção',
-            text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quis corporis quos quam officiis magni, non iure vitae tempore facilis a expedita eos ipsum eum, ratione vel minima tenetur explicabo!',
+            legend: 'Security Integration',
         },
     ];
 
