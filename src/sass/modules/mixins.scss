@@ -7,3 +7,15 @@ $header-size: 75px !default;
     justify-content: $content;
     align-content: $acontent;
 }
+
+@mixin tablet {
+    @media only screen and (max-width: 1289px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}

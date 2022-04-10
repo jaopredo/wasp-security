@@ -43,12 +43,29 @@ nav {
 
 #menu-icon {  // Ocultando ícone do menu (Responsividade)
     display: none;
+    font-size: 3.2em;
+
+    @include phone {
+        display: block;
+    }
 }
 
 .menu-list {  // Estilizando o menu
     @include flex-align(center, center);  // Alinhamento dos itens
+    display: flex;
     flex-flow: row nowrap;
     height: 100%;
+
+    @include phone {
+        display: none;
+        flex-flow: column nowrap;
+        position: absolute;
+        right: 0;
+        top: $header-size;
+        background-color: $body-color;
+        height: fit-content;
+        box-shadow: rgba(0, 0, 0, 0.514) 3px 3px 3px;
+    }
 }
 
 .menu-option {  // Opções do menu
@@ -63,6 +80,10 @@ nav {
     }
     &:active {
         background-color: $body-color - rgb(40, 40, 40);
+    }
+
+    @include phone {
+        width: 100%;
     }
 }
 

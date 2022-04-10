@@ -6,6 +6,10 @@
 
 .option {
     @include flex-align(center, space-between);
+    @include phone {
+        gap: 10px;
+        height: 40vh;
+    }
     
     flex-flow: column nowrap;
     gap: 30px;
