@@ -69,6 +69,7 @@ section#intro {
 h1 {
     @include phone {
         font-size: 7em;
+        margin-left: 5px;
     }
     font-family: "dealerplate";
     color: $body-color;

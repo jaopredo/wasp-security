@@ -36,3 +36,9 @@ $header-size: 75px !default;
         @content;
     }
 }
+
+@mixin changeServices {
+    @media (max-width: 705px) {
+        @content;
+    }
+}

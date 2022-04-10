@@ -73,7 +73,7 @@ function Services() {
     /* ESTILO DO RODAPÉ */
     const footerStyle = {
         backgroundColor: "#f5f3e6",
-        marginTop: "-30px",
+        marginTop: "-10px",
         borderRadius: "10px",
     }
 
