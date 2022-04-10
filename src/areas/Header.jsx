@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import { ImMenu } from 'react-icons/im';
 
 /* IMAGES */
 import Logo from '../images/logo.png';
@@ -14,6 +15,16 @@ function Header({ titleProgress, haveMenu }) {
      *  @param {Object} titleProgress Armazena o valor da opacidade do título
      */
     const titleRef = useRef();  // Ref do título
+    const menuRef = useRef();  // Ref do menu
+
+    const onIconClick = (e) => {
+        const { current } = menuRef;
+        if (current.style.display === "block") {
+            current.style.display = "none";
+        } else {
+            current.style.display = "block";
+        }
+    }
 
     return (
         <header className='main-header'>
@@ -27,11 +38,12 @@ function Header({ titleProgress, haveMenu }) {
                 </Parallax>
             </div>
             {haveMenu && <nav>
-                <ul className='menu-list generic-list'>
+                <ul className='menu-list generic-list' ref={menuRef}>
                     <li className='menu-option'><a href="#intro">Home</a></li>
                     <li className='menu-option'><a href="#services">Services</a></li>
                     <li className='menu-option'><a href="#contact">Support</a></li>
                 </ul>
+                <ImMenu id='menu-icon' onClick={onIconClick}/>
             </nav>}
         </header>
     );

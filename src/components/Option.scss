@@ -6,6 +6,7 @@
 
 .option {
     @include flex-align(center, space-between);
+    
     flex-flow: column nowrap;
     gap: 30px;
 
@@ -16,7 +17,7 @@
     color: $body-color;
 
     border-radius: 20px;
-    height: 400px;
+    height: 60vh;
 
     transition: transform 0.5s;
 
@@ -33,6 +34,12 @@
     }
     &:active {
         background-color: $generic-yellow - rgb(30, 30, 30);
+    }
+
+    @include phone {
+        height: 40vh;
+        width: 80vw;
+        gap: 0px;
     }
 }
 

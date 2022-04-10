@@ -11,3 +11,28 @@ $header-size: 75px !default;
 @mixin rounded {
     border-radius: 2px;
 }
+
+
+@mixin phone {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin removeCurve {
+    @media (max-width: 1059px) {
+        @content;
+    }
+}
+
+@mixin removeButton {
+    @media (max-width: 1059px) {
+        @content;
+    }
+}
+
+@mixin changeMenu {
+    @media (max-width: 650px) {
+        @content;
+    }
+}

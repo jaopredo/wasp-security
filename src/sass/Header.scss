@@ -12,7 +12,7 @@ header.main-header {
 
     background-color: $body-color;
     height: $header-size;
-    width: 100vw;
+    min-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.253) 0px 3px 5px;
     padding-right: $header-padding;
     padding-left: $header-padding;
@@ -24,8 +24,6 @@ header.main-header {
     flex-flow: row wrap;
 
     z-index: 1;
-
-    grid-area: h;
 }
 
 .logo-container {
@@ -41,11 +39,30 @@ header.main-header {
     }
 }
 
+
 nav {
     height: 100%;
+    font-size: 3em;
+}
+
+#menu-icon {
+    @include changeMenu {
+        display: block;
+    }
+    display: none;
 }
 
 .menu-list {
+    @include changeMenu {
+        display: none;
+        background-color: $body-color;
+        box-shadow: rgba(0, 0, 0, 0.493) 3px 3px 3px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        right: 0;
+        top: $header-size;
+    }
     height: 100%;
 
     display: flex;
@@ -57,6 +74,7 @@ nav {
 
     height: 100%;
     padding: 10px;
+    font-size: 1rem;
 
     display: flex;
 

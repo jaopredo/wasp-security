@@ -1,4 +1,4 @@
-@import "./modules/colors.scss";
+@import "./modules/colors.scss", "./modules/mixins.scss";
 
 
 body {
@@ -12,6 +12,7 @@ body {
 
 html, body, #root {
     min-height: 100vh;
+    max-width: 100vw;
     background-color: $body-color;
 }
 
