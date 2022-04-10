@@ -19,10 +19,10 @@ function Header({ titleProgress, haveMenu }) {
 
     const onIconClick = (e) => {
         const { current } = menuRef;
-        if (current.style.display === "block") {
+        if (current.style.display === "flex") {
             current.style.display = "none";
         } else {
-            current.style.display = "block";
+            current.style.display = "flex";
         }
     }
 

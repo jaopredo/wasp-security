@@ -1,31 +1,28 @@
-@import "./modules/colors.scss", "./modules/mixins.scss";
-@font-face {
-    font-family: "Zector";
-    src: url("../fonts/Zector.ttf");
-}
+@import "./modules/colors.scss", "./modules/mixins.scss", "./modules/fonts.scss";
 
 $header-padding: 20px;
-$header-size: 75px;
 
+// Configurando header
 header.main-header {
     @include flex-align(stretch, space-between);
 
     background-color: $body-color;
+
     height: $header-size;
-    min-width: 100%;
+    width: 100%;
+    
     box-shadow: rgba(0, 0, 0, 0.253) 0px 3px 5px;
-    padding-right: $header-padding;
+
     padding-left: $header-padding;
+    padding-right: $header-padding;
 
     position: fixed;
     top: 0;
 
-    display: flex;
-    flex-flow: row wrap;
-
     z-index: 1;
 }
 
+// Container da imagem e foto da logo
 .logo-container {
     @include flex-align(center, center);
     flex-flow: row wrap;
@@ -39,44 +36,26 @@ header.main-header {
     }
 }
 
-
+// Menu
 nav {
-    height: 100%;
-    font-size: 3em;
+    height: 100%;  // Nav ocupa todo o cabeçalho
 }
 
-#menu-icon {
-    @include changeMenu {
-        display: block;
-    }
+#menu-icon {  // Ocultando ícone do menu (Responsividade)
     display: none;
 }
 
-.menu-list {
-    @include changeMenu {
-        display: none;
-        background-color: $body-color;
-        box-shadow: rgba(0, 0, 0, 0.493) 3px 3px 3px;
-        height: fit-content;
-        width: fit-content;
-        position: absolute;
-        right: 0;
-        top: $header-size;
-    }
+.menu-list {  // Estilizando o menu
+    @include flex-align(center, center);  // Alinhamento dos itens
+    flex-flow: row nowrap;
     height: 100%;
-
-    display: flex;
-    flex-flow: row wrap;
 }
 
-.menu-option {
+.menu-option {  // Opções do menu
     @include flex-align(center, center);
-
     height: 100%;
+    width: fit-content;
     padding: 10px;
-    font-size: 1rem;
-
-    display: flex;
 
     &:hover {
         background-color: $body-color - rgb(20, 20, 20);
@@ -88,18 +67,23 @@ nav {
 }
 
 
-a {
+a {  // Estilizando links do menu
     color: $font-color;
     text-decoration: none;
+    font-size: 1.7rem;
     font-weight: 1000;
-    font-size: 2em;
+    width: fit-content;
     font-family: "Zector";
 }
 
-#logo {
+#logo {  // Ajustando tamanho da logo (Dentro do container)
     height: 80%;
 }
 
 #title-container {
+    /*
+        Ajustando transição da opacidade do título
+        Opacidade muda no JS
+    */
     transition: opacity 0.8s;
 }

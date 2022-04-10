@@ -14,10 +14,10 @@
 }
 
 .services-list-desc {
-    @include phone {
-        flex-flow: column wrap;
-        gap: 0px;
-    }
+    // @include phone {
+    //     flex-flow: column wrap;
+    //     gap: 0px;
+    // }
     @include flex-align(center, center);
     flex-flow: row wrap;
     gap: 50px;
@@ -52,20 +52,20 @@ a {
 
 li {
     @include flex-align(center, center);
-    @include changeServices {
-        @include flex-align(stretch, center);
+    // @include changeServices {
+    //     @include flex-align(stretch, center);
 
-    }
+    // }
     flex-flow: row nowrap;
     width: 100%;
     gap: 30px;
 
     .text-container {
-        @include phone {
-            height: fit-content;
-            width: 50%;
-            font-size: 0.8rem;
-        }
+        // @include phone {
+        //     height: fit-content;
+        //     width: 50%;
+        //     font-size: 0.8rem;
+        // }
         word-break: break-word;
         width: 100%;
         margin: 0;

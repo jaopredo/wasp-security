@@ -36,11 +36,11 @@
         background-color: $generic-yellow - rgb(30, 30, 30);
     }
 
-    @include phone {
-        height: 40vh;
-        width: 80vw;
-        gap: 0px;
-    }
+    // @include phone {
+    //     height: 40vh;
+    //     width: 80vw;
+    //     gap: 0px;
+    // }
 }
 
 .option-image {

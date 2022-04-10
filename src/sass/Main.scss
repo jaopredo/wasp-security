@@ -1,43 +1,36 @@
-@import "./modules/colors.scss", "./modules/mixins.scss";
-@font-face {
-    font-family: "Zector";
-    src: url("../fonts/Zector.ttf");
-}
-@font-face {
-    font-family: "dealerplate";
-    src: url("../fonts/dealerplate\ california.ttf");
-}
+@import "./modules/colors.scss", "./modules/mixins.scss", "./modules/fonts.scss";
 
 main.content-container {
     margin-top: $header-size;
-    width: 99vw;
+    width: 100%;
 }
 
 /* SEÇÃO E PARALLAX */
 section#intro {
-    @include phone {
-        background-attachment: local;
-        background-size: 200% auto;
-        background-position-x: 60%;
-        height: 50vh;
-    }
+    // @include phone {
+    //     background-attachment: local;
+    //     background-size: 200% auto;
+    //     background-position-x: 60%;
+    //     height: 50vh;
+    // }
     display: block;
 
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
-    background-size: 101% auto;
+    background-size: 100% auto;
     background-attachment: fixed;
 
     height: 100vh;
+    width: 100%;
 
     position: relative;
 }
 
 /* ONDA SVG */
 .curveUpColor {
-    @include removeCurve {
-        display: none;
-    };
+    // @include removeCurve {
+    //     display: none;
+    // };
 
     color: $body-color;
     fill: $body-color;
@@ -51,11 +44,11 @@ section#intro {
 /* TÍTULOS */
 .text-container {
     @include flex-align(center, center);
-    @include phone {
-        margin-left: 0px;
-        position: absolute;
-        top: 40px;
-    }
+    // @include phone {
+    //     margin-left: 0px;
+    //     position: absolute;
+    //     top: 40px;
+    // }
     flex-flow: column wrap;
 
     margin-left: 30px;
@@ -67,10 +60,10 @@ section#intro {
 }
 
 h1 {
-    @include phone {
-        font-size: 7em;
-        margin-left: 5px;
-    }
+    // @include phone {
+    //     font-size: 7em;
+    //     margin-left: 5px;
+    // }
     font-family: "dealerplate";
     color: $body-color;
     font-size: 11em;
@@ -78,9 +71,9 @@ h1 {
 }
 
 button {
-    @include removeButton {
-        display: none
-    };
+    // @include removeButton {
+    //     display: none
+    // };
 
     font-family: "Zector";
     padding: 10px;
@@ -132,7 +125,7 @@ button {
 #generic-text {
     @include flex-align(center, center);
     flex-flow: row wrap;
-    width: 100vw ;
+    width: 100%;
 
     h2 {
         font-family: "dealerplate";
@@ -140,10 +133,14 @@ button {
     }
 
     img {
-        @include phone {
-            width: 90%;
-        }
+        // @include phone {
+        //     width: 90%;
+        // }
     }
+}
+
+#services {
+    width: 100%;
 }
 
 .content-text-container {
@@ -160,14 +157,14 @@ button {
 
 .services-list {
     @include flex-align(center, center);
-    @include phone {
-        flex-flow: column wrap;
-        gap: 0;
+    // @include phone {
+    //     flex-flow: column wrap;
+    //     gap: 0;
 
-        li {
-            width: 100%;
-        }
-    }
+    //     li {
+    //         width: 100%;
+    //     }
+    // }
     flex-flow: row wrap;
     gap: 50px;
     margin-bottom: 100px;
