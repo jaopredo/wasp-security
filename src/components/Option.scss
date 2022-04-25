@@ -26,6 +26,9 @@
     transition: transform 0.5s;
 
     figcaption {
+        @include phone {
+            font-size: 1.2rem;
+        }
         color: $font-color;
         text-align: center;
         font-size: 3.5vw;

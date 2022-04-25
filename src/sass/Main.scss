@@ -116,6 +116,9 @@ button {
 /* CONTENT */
 #content {
     @include flex-align(stretch, space-evenly);
+    @include phone {
+        gap: 30px;
+    }
     flex-flow: column wrap;
     gap: 150px;
 
@@ -164,12 +167,17 @@ button {
     @include flex-align(center, center);
     @include phone {
         gap: 30px;
+        flex-direction: column;
     }
     flex-flow: row wrap;
     gap: 50px;
     margin-bottom: 100px;
 
     li {
+        @include phone {
+            width: 100%;
+            padding: 0px;
+        }
         height: 100%;
         width: 20%;
     }

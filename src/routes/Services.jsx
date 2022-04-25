@@ -31,10 +31,12 @@ function Services() {
                 </ul>
                 <p>We have 4 bug's levels</p>
                 <table id='service-danger-table'>
-                    <tr><td className='leve'>Weak</td></tr>
-                    <tr><td className='atention'>Danger</td></tr>
-                    <tr><td className='bad'>Bad</td></tr>
-                    <tr><td className='critic'>Critic</td></tr>
+                    <tbody style={{width: '100%'}}>
+                        <tr><td className='leve'>Weak</td></tr>
+                        <tr><td className='atention'>Danger</td></tr>
+                        <tr><td className='bad'>Bad</td></tr>
+                        <tr><td className='critic'>Critic</td></tr>
+                    </tbody>
                 </table>
             </>)
         },

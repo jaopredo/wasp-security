@@ -52,23 +52,20 @@ a {
 
 li {
     @include flex-align(center, center);
-    // @include changeServices {
-    //     @include flex-align(stretch, center);
-
-    // }
     flex-flow: row nowrap;
     width: 100%;
     gap: 30px;
 
     .text-container {
-        // @include phone {
-        //     height: fit-content;
-        //     width: 50%;
-        //     font-size: 0.8rem;
-        // }
+        @include phone {
+            height: fit-content;
+            width: 300px;
+            font-size: 0.8rem;
+        }
         word-break: break-word;
-        width: 100%;
+        position: relative;
         margin: 0;
+        top: 0;
         color: $font-color;
         font-size: 2vw;
         background: $body-color;
