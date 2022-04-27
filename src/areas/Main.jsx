@@ -8,12 +8,14 @@ import Wasp from '../images/wasp.png';
 import Option from '../components/Option';
 
 function Main({ setProgress, servicesOptions }) {
+    const mailLink = 'https://mail.google.com/mail/u/2/#inbox?compose=CllgCJlGTpggsJszHxvqCMMzJPJGQzMJJjVxtXmRFKllHbQtZlFmKSQshLWFVmWHfdJzCQktPDV';
+
     return (
         <main className='content-container'>
             <section id='intro'>
                 <div className='text-container'>
                     <h1>WASP</h1>
-                    <button type='button'>Find out more</button>
+                    <a href={mailLink}><button type='button'>Find out more</button></a>
                 </div>
                 <svg className="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="200" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
