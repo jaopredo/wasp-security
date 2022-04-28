@@ -1,0 +1,35 @@
+@import "../sass/modules/colors.scss", "../sass/modules/mixins.scss";
+@font-face {
+    font-family: 'dealerplate';
+    src: url("../fonts/dealerplate\ california.ttf");
+}
+
+.service-option {
+    @include flex-align(center, space-between);
+    flex-flow: column nowrap;
+    gap: 30px;
+
+    width: 50%;
+    padding: 30px;
+
+    color: $body-color;
+
+    figcaption {
+        color: $body-color;
+        text-align: center;
+        font-size: 3.5vw;
+        font-family: 'dealerplate';
+    }
+    
+    &:hover {
+        cursor: auto;
+    }
+
+    a {
+        width: 30%
+    }
+}
+
+.service-option-image {
+    width: 50%;
+}

@@ -7,8 +7,28 @@ import Wasp from '../images/wasp.png';
 /* COMPONENTS */
 import Option from '../components/Option';
 
-function Main({ setProgress, servicesOptions }) {
+/* IMAGES */
+import Search from '../images/search-icon.png';
+import Game from '../images/game-icon.png';
+import Block from '../images/block-icon.png';
+
+function Main({ setProgress }) {
     const mailLink = 'https://mail.google.com/mail/u/2/#inbox?compose=CllgCJlGTpggsJszHxvqCMMzJPJGQzMJJjVxtXmRFKllHbQtZlFmKSQshLWFVmWHfdJzCQktPDV';
+
+    const servicesOptions = [
+        {
+            src: Search,
+            legend: 'Security Consulting',
+        },
+        {
+            src: Game,
+            legend: 'Security Management',
+        },
+        {
+            src: Block,
+            legend: 'Security Integration',
+        },
+    ];
 
     return (
         <main className='content-container'>
@@ -34,7 +54,9 @@ function Main({ setProgress, servicesOptions }) {
                 <article id='services' className='services-container'>
                     <ul className='services-list generic-list'>
                         {React.Children.toArray(servicesOptions.map(
-                            imagem => <li className='service-option'><Option {...imagem} className="option" /></li>
+                            imagem => <li>
+                                <Option {...imagem} className="option" />
+                            </li>
                         ))}
                     </ul>
                 </article>

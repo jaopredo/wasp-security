@@ -24,15 +24,21 @@ header.main-header {
 
 // Container da imagem e foto da logo
 .logo-container {
-    @include flex-align(center, space-between);
+    @include flex-align(center, center);
     flex-flow: row nowrap;
 
     height: 100%;
-    width: 11%;
 
     h1 {
         font-size: 3.2em;
         color: $font-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    a {
+        font-size: 1.1rem;
     }
 }
 
@@ -85,18 +91,15 @@ nav {
     @include phone {
         width: 100%;
     }
-
-    a {  // Estilizando links do menu
-        color: $font-color;
-        text-decoration: none;
-        font-size: 1.7rem;
-        font-weight: 1000;
-        width: fit-content;
-        font-family: "Zector";
-    }
 }
-a {
+
+a {  // Estilizando links do menu
+    color: $font-color;
     text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 1000;
+    width: fit-content;
+    font-family: "Zector";
 }
 
 #logo {  // Ajustando tamanho da logo (Dentro do container)

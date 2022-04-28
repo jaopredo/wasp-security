@@ -90,7 +90,7 @@ function Services() {
                     <ul className='services-list-desc generic-list'>
                         {React.Children.toArray(servicesOptions.map(
                             imagem => <li>
-                                <Service {...imagem} className="service-option" />
+                                <Service {...imagem} className="service-option"/>
                             </li>
                         ))}
                     </ul>

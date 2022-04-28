@@ -1,14 +1,15 @@
 import React from 'react';
 
-/* COMPONENTS */
-import Option from '../components/Option';
+import './Service.scss';
 
-function Service({text, ...rest}) {
-
+function Service({text, src, legend, ...rest}) {
     return (
         <>
             <div className='text-container'>{text}</div>
-            <Option {...rest} />
+            <figure {...rest}>
+                <img className='service-option-image' src={src} alt={legend} />
+                <figcaption>{legend}</figcaption>
+            </figure>
         </>
     );
 }

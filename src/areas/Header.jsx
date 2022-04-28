@@ -29,15 +29,15 @@ function Header({ titleProgress, haveMenu }) {
 
     return (
         <header className='main-header'>
-            <Link className="logo-container" to={'/'}>
+            <div className="logo-container">
                 <img id='logo' src={Logo} alt="Logo" />
-                <Parallax onProgressChange={progress => {
+                <Parallax className='title-aligner' onProgressChange={progress => {
                     titleRef.current.style.opacity = titleProgress;
                     // Coloco a opacidade do titulo como o progresso do main (0 à 1)
                 }}>
-                    <h1 ref={titleRef}>WASP</h1>
+                    <Link to={'/wasp-security'}><h1 ref={titleRef}>WASP</h1></Link>
                 </Parallax>
-            </Link>
+            </div>
             {haveMenu && <nav>
                 <ul className='menu-list generic-list' ref={menuRef}>
                     <li className='menu-option'><a href="#intro">Home</a></li>
