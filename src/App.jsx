@@ -10,8 +10,8 @@ import MainPage from './routes/MainPage';
 function App() {
     return (
         <Routes>
-            <Route path='/wasp-security' element={<MainPage />} />
-            <Route path='/wasp-security/services' element={<Services/>} />
+            <Route path='/' element={<MainPage />} />
+            <Route path='/services' element={<Services/>} />
         </Routes>
     );
 }

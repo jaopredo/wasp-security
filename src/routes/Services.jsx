@@ -20,6 +20,7 @@ function Services() {
         {
             src: Search,
             legend: 'Security Consulting',
+            id: 'security-consulting',
             text: (<>
                 <p>
                     Analyse, rating and security tests.
@@ -43,6 +44,7 @@ function Services() {
         {
             src: Game,
             legend: 'Security Management',
+            id: 'security-management',
             text: (
                 <>
                     <p>
@@ -59,6 +61,7 @@ function Services() {
         {
             src: Block,
             legend: 'Security Integration',
+            id: 'security-integration',
             text: (
                 <>
                     <p>Preventing by instalation and personalization of properly configurations for every single case</p>

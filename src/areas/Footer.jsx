@@ -11,9 +11,8 @@ function Footer({...rest}) {
     return (
         <footer {...rest} id='contact' className='footer-contact'>
             <h2>WASP CEARÁ</h2>
-            <p><MdPhone/> (88) 9683-7327</p>
-            <p><a href={mailLink}><MdEmail/> cybersecurity@wasp.com</a></p>
-            <p><AiFillInstagram/> @wasp_cybersecurity</p>
+            <p><a href={mailLink} target="_blank"><MdEmail/> wasp.sec.contato@gmail.com</a></p>
+            <p><a href="https://www.instagram.com/wasp.sec/" target="_blank"><AiFillInstagram/> @wasp.sec</a></p>
         </footer>
     );
 }

@@ -6,6 +6,10 @@
 
 .option {
     @include flex-align(center, space-between);
+    @include tablet {
+        justify-content: center;
+        height: 40vh;
+    }
     @include phone {
         gap: 10px;
         height: 40vh;

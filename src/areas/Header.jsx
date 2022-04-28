@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { ImMenu } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 /* IMAGES */
 import Logo from '../images/logo.png';
@@ -28,7 +29,7 @@ function Header({ titleProgress, haveMenu }) {
 
     return (
         <header className='main-header'>
-            <div className="logo-container">
+            <Link className="logo-container" to={'/'}>
                 <img id='logo' src={Logo} alt="Logo" />
                 <Parallax onProgressChange={progress => {
                     titleRef.current.style.opacity = titleProgress;
@@ -36,14 +37,16 @@ function Header({ titleProgress, haveMenu }) {
                 }}>
                     <h1 ref={titleRef}>WASP</h1>
                 </Parallax>
-            </div>
+            </Link>
             {haveMenu && <nav>
                 <ul className='menu-list generic-list' ref={menuRef}>
                     <li className='menu-option'><a href="#intro">Home</a></li>
                     <li className='menu-option'><a href="#services">Services</a></li>
                     <li className='menu-option'><a href="#contact">Support</a></li>
                 </ul>
-                <ImMenu id='menu-icon' onClick={onIconClick}/>
+                <div className='menu-icon-container'>
+                    <ImMenu id='menu-icon' onClick={onIconClick}/>
+                </div>
             </nav>}
         </header>
     );

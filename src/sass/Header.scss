@@ -24,11 +24,11 @@ header.main-header {
 
 // Container da imagem e foto da logo
 .logo-container {
-    @include flex-align(center, center);
-    flex-flow: row wrap;
-    gap: 10px;
+    @include flex-align(center, space-between);
+    flex-flow: row nowrap;
 
     height: 100%;
+    width: 11%;
 
     h1 {
         font-size: 3.2em;
@@ -85,16 +85,18 @@ nav {
     @include phone {
         width: 100%;
     }
+
+    a {  // Estilizando links do menu
+        color: $font-color;
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: 1000;
+        width: fit-content;
+        font-family: "Zector";
+    }
 }
-
-
-a {  // Estilizando links do menu
-    color: $font-color;
+a {
     text-decoration: none;
-    font-size: 1.7rem;
-    font-weight: 1000;
-    width: fit-content;
-    font-family: "Zector";
 }
 
 #logo {  // Ajustando tamanho da logo (Dentro do container)
@@ -107,4 +109,12 @@ a {  // Estilizando links do menu
         Opacidade muda no JS
     */
     transition: opacity 0.8s;
+}
+
+.menu-icon-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
