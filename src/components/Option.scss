@@ -7,7 +7,8 @@
 .option {
     @include flex-align(center, space-between);
     @include tablet {
-        height: 45vh;
+        height: 50vh;
+        gap: 5vh;
     }
     @include phone {
         gap: 10px;

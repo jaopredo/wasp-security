@@ -26,15 +26,16 @@ header.main-header {
 .logo-container {
     @include flex-align(center, center);
     flex-flow: row nowrap;
+    gap: 5px;
 
     height: 100%;
 
     h1 {
         font-size: 3.2em;
+        display: block;
         color: $font-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        line-height: 100%;
+        margin: 0;
         height: 100%;
     }
     a {
